@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "d3614f1d-aa4b-44a0-abf7-6d8ee00356cf",
+		"_postman_id": "44219a1b-ae96-4611-b0e3-1a9ecbff38e0",
 		"name": "Berk Mutlu",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "50542645",
-		"_collection_link": "https://iam-berkmutlu-4976617.postman.co/workspace/Berk-Mutlu's-Workspace~791e5ca6-c864-46d0-8f4b-591be25f3644/collection/50542645-d3614f1d-aa4b-44a0-abf7-6d8ee00356cf?action=share&source=collection_link&creator=50542645"
+		"_collection_link": "https://iam-berkmutlu-4976617.postman.co/workspace/Berk-Mutlu's-Workspace~791e5ca6-c864-46d0-8f4b-591be25f3644/collection/50542645-44219a1b-ae96-4611-b0e3-1a9ecbff38e0?action=share&source=collection_link&creator=50542645"
 	},
 	"item": [
 		{
@@ -100,7 +100,7 @@
 					]
 				},
 				"url": {
-					"raw": "https://backend-drab-nu-66.vercel.app/",
+					"raw": "https://backend-drab-nu-66.vercel.app/api/venues",
 					"protocol": "https",
 					"host": [
 						"backend-drab-nu-66",
@@ -108,7 +108,8 @@
 						"app"
 					],
 					"path": [
-						""
+						"api",
+						"venues"
 					]
 				}
 			},
@@ -142,7 +143,7 @@
 					"urlencoded": []
 				},
 				"url": {
-					"raw": "https://backend-drab-nu-66.vercel.app/?lat=38&long=34",
+					"raw": "https://backend-drab-nu-66.vercel.app/api/venues?lat=38&long=34",
 					"protocol": "https",
 					"host": [
 						"backend-drab-nu-66",
@@ -150,7 +151,8 @@
 						"app"
 					],
 					"path": [
-						""
+						"api",
+						"venues"
 					],
 					"query": [
 						{
@@ -187,7 +189,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://backend-drab-nu-66.vercel.app//{{venueid}}",
+					"raw": "https://backend-drab-nu-66.vercel.app/api/venues/{{venueid}}",
 					"protocol": "https",
 					"host": [
 						"backend-drab-nu-66",
@@ -195,7 +197,8 @@
 						"app"
 					],
 					"path": [
-						"",
+						"api",
+						"venues",
 						"{{venueid}}"
 					]
 				}
@@ -293,7 +296,7 @@
 					]
 				},
 				"url": {
-					"raw": "https://backend-drab-nu-66.vercel.app//{{venueid}}",
+					"raw": "https://backend-drab-nu-66.vercel.app/api/venues/{{venueid}}",
 					"protocol": "https",
 					"host": [
 						"backend-drab-nu-66",
@@ -301,7 +304,8 @@
 						"app"
 					],
 					"path": [
-						"",
+						"api",
+						"venues",
 						"{{venueid}}"
 					]
 				}
@@ -343,7 +347,7 @@
 						},
 						{
 							"key": "rating",
-							"value": "10",
+							"value": "5",
 							"type": "text"
 						},
 						{
@@ -354,7 +358,7 @@
 					]
 				},
 				"url": {
-					"raw": "https://backend-drab-nu-66.vercel.app//{{venueid}}/comments",
+					"raw": "https://backend-drab-nu-66.vercel.app/api/venues/{{venueid}}/comments",
 					"protocol": "https",
 					"host": [
 						"backend-drab-nu-66",
@@ -362,7 +366,8 @@
 						"app"
 					],
 					"path": [
-						"",
+						"api",
+						"venues",
 						"{{venueid}}",
 						"comments"
 					]
@@ -411,7 +416,7 @@
 					"urlencoded": []
 				},
 				"url": {
-					"raw": "https://backend-drab-nu-66.vercel.app//{{venueid}}/comments/{{commentid}}",
+					"raw": "https://backend-drab-nu-66.vercel.app/api/venues/{{venueid}}/comments/{{commentid}}",
 					"protocol": "https",
 					"host": [
 						"backend-drab-nu-66",
@@ -419,7 +424,8 @@
 						"app"
 					],
 					"path": [
-						"",
+						"api",
+						"venues",
 						"{{venueid}}",
 						"comments",
 						"{{commentid}}"
@@ -469,7 +475,7 @@
 					]
 				},
 				"url": {
-					"raw": "https://backend-drab-nu-66.vercel.app//{{venueid}}/comments/{{commentid}}",
+					"raw": "https://backend-drab-nu-66.vercel.app/api/venues/{{venueid}}/comments/{{commentid}}",
 					"protocol": "https",
 					"host": [
 						"backend-drab-nu-66",
@@ -477,7 +483,8 @@
 						"app"
 					],
 					"path": [
-						"",
+						"api",
+						"venues",
 						"{{venueid}}",
 						"comments",
 						"{{commentid}}"
@@ -511,7 +518,7 @@
 					"urlencoded": []
 				},
 				"url": {
-					"raw": "https://backend-drab-nu-66.vercel.app//{{venueid}}/comments/{{commentid}}",
+					"raw": "https://backend-drab-nu-66.vercel.app/api/venues/{{venueid}}/comments/{{commentid}}",
 					"protocol": "https",
 					"host": [
 						"backend-drab-nu-66",
@@ -519,7 +526,8 @@
 						"app"
 					],
 					"path": [
-						"",
+						"api",
+						"venues",
 						"{{venueid}}",
 						"comments",
 						"{{commentid}}"
@@ -553,7 +561,7 @@
 					"urlencoded": []
 				},
 				"url": {
-					"raw": "https://backend-drab-nu-66.vercel.app//{{venueid}}",
+					"raw": "https://backend-drab-nu-66.vercel.app/api/venues/{{venueid}}",
 					"protocol": "https",
 					"host": [
 						"backend-drab-nu-66",
@@ -561,7 +569,8 @@
 						"app"
 					],
 					"path": [
-						"",
+						"api",
+						"venues",
 						"{{venueid}}"
 					]
 				}
