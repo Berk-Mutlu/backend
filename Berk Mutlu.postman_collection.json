@@ -1,0 +1,596 @@
+{
+	"info": {
+		"_postman_id": "d3614f1d-aa4b-44a0-abf7-6d8ee00356cf",
+		"name": "Berk Mutlu",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50542645",
+		"_collection_link": "https://iam-berkmutlu-4976617.postman.co/workspace/Berk-Mutlu's-Workspace~791e5ca6-c864-46d0-8f4b-591be25f3644/collection/50542645-d3614f1d-aa4b-44a0-abf7-6d8ee00356cf?action=share&source=collection_link&creator=50542645"
+	},
+	"item": [
+		{
+			"name": "Add Venue",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var id = pm.response.json()._id;",
+							"pm.environment.set(\"venueid\", id);",
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Trc American Dinner",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "Mersin Mezitli Babil Sahil",
+							"type": "text"
+						},
+						{
+							"key": "foodanddrink",
+							"value": "Burger,Sosis,Alkol",
+							"type": "text"
+						},
+						{
+							"key": "lat",
+							"value": "38",
+							"type": "text"
+						},
+						{
+							"key": "long",
+							"value": "35",
+							"type": "text"
+						},
+						{
+							"key": "day1",
+							"value": "Pazartesi-Cuma",
+							"type": "text"
+						},
+						{
+							"key": "open1",
+							"value": "11.00",
+							"type": "text"
+						},
+						{
+							"key": "close1",
+							"value": "02.00",
+							"type": "text"
+						},
+						{
+							"key": "isClosed1",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "open2",
+							"value": "10.00",
+							"type": "text"
+						},
+						{
+							"key": "close2",
+							"value": "03.00",
+							"type": "text"
+						},
+						{
+							"key": "isClosed2",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "day2",
+							"value": "Cumartesi-Pazar",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://backend-drab-nu-66.vercel.app/",
+					"protocol": "https",
+					"host": [
+						"backend-drab-nu-66",
+						"vercel",
+						"app"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Nearby Venues",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "https://backend-drab-nu-66.vercel.app/?lat=38&long=34",
+					"protocol": "https",
+					"host": [
+						"backend-drab-nu-66",
+						"vercel",
+						"app"
+					],
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "38"
+						},
+						{
+							"key": "long",
+							"value": "34"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Venue",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://backend-drab-nu-66.vercel.app//{{venueid}}",
+					"protocol": "https",
+					"host": [
+						"backend-drab-nu-66",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"",
+						"{{venueid}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Venue",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Draft",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "Mersin Mezitli Babil Shil",
+							"type": "text"
+						},
+						{
+							"key": "foodanddrink",
+							"value": "burger,pizza,alkol",
+							"type": "text"
+						},
+						{
+							"key": "lat",
+							"value": "42",
+							"type": "text"
+						},
+						{
+							"key": "long",
+							"value": "33",
+							"type": "text"
+						},
+						{
+							"key": "day1",
+							"value": "Pazartesi-Cuma",
+							"type": "text"
+						},
+						{
+							"key": "open1",
+							"value": "11.00",
+							"type": "text"
+						},
+						{
+							"key": "close1",
+							"value": "02.00",
+							"type": "text"
+						},
+						{
+							"key": "isClosed1",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "day2",
+							"value": "Cumartesi-Pazar",
+							"type": "text"
+						},
+						{
+							"key": "open2",
+							"value": "10.00",
+							"type": "text"
+						},
+						{
+							"key": "close2",
+							"value": "03.00",
+							"type": "text"
+						},
+						{
+							"key": "isClosed2",
+							"value": "false",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://backend-drab-nu-66.vercel.app//{{venueid}}",
+					"protocol": "https",
+					"host": [
+						"backend-drab-nu-66",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"",
+						"{{venueid}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Comment",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var id = pm.response.json()._id",
+							"pm.environment.set(\"commentid\", id);",
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "author",
+							"value": "Berk",
+							"type": "text"
+						},
+						{
+							"key": "rating",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "text",
+							"value": "Yemekler güzel,çalışanlar nazik,servis hızlı.",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://backend-drab-nu-66.vercel.app//{{venueid}}/comments",
+					"protocol": "https",
+					"host": [
+						"backend-drab-nu-66",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"",
+						"{{venueid}}",
+						"comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Comment",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var id = pm.response.json().comment._id",
+							"pm.environment.set(\"commentid\", id);",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "https://backend-drab-nu-66.vercel.app//{{venueid}}/comments/{{commentid}}",
+					"protocol": "https",
+					"host": [
+						"backend-drab-nu-66",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"",
+						"{{venueid}}",
+						"comments",
+						"{{commentid}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Comment",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "author",
+							"value": "Berk",
+							"type": "text"
+						},
+						{
+							"key": "rating",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "text",
+							"value": "Beğenmedim.",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://backend-drab-nu-66.vercel.app//{{venueid}}/comments/{{commentid}}",
+					"protocol": "https",
+					"host": [
+						"backend-drab-nu-66",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"",
+						"{{venueid}}",
+						"comments",
+						"{{commentid}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Comment",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "https://backend-drab-nu-66.vercel.app//{{venueid}}/comments/{{commentid}}",
+					"protocol": "https",
+					"host": [
+						"backend-drab-nu-66",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"",
+						"{{venueid}}",
+						"comments",
+						"{{commentid}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Venue",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "https://backend-drab-nu-66.vercel.app//{{venueid}}",
+					"protocol": "https",
+					"host": [
+						"backend-drab-nu-66",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"",
+						"{{venueid}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

@@ -40,6 +40,8 @@ var createComment = function (req, res, incomingVenue) {
             var comment = comments[comments.length - 1];
             updateRating(venue._id, false);
             createResponse(res, "201", comment);
+        }).catch(function (error) {
+            createResponse(res, "400", error);
         });
     } catch (error) {
         createResponse(res, "400", error);
