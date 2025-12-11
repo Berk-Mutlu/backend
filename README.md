@@ -1,4 +1,5 @@
 # 📍 Venue & Comment Management API
+
 ![Status](https://img.shields.io/badge/status-Active-success.svg)
 ![Deployment](https://img.shields.io/badge/deployment-Vercel-black.svg)
 
@@ -10,21 +11,11 @@ Bu proje, mekanlar (venues) ve bu mekanlara yapılan yorumları (comments) yöne
 
 ---
 
-## 🛠 Özellikler (Features)
-
-- **Mekan Yönetimi**: Mekan ekleme, düzenleme, görüntüleme ve silme.
-- **Lokasyon Servisleri**: Koordinatlara göre yakındaki mekanları listeleme.
-- **Yorum Sistemi**: Mekanlara yorum yapma, yorumları güncelleme ve silme.
-- **Yüksek Performans**: Vercel üzerinde hızlı ve güvenilir altyapı.
-
----
----
-
 ## 🚀 Kurulum ve Çalıştırma (Installation & Setup)
 
 Projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları izleyin:
 
-\`\`\`bash
+```bash
 # Depoyu klonlayın
 git clone <repo-url>
 
@@ -36,10 +27,20 @@ npm install
 
 # Projeyi başlatın
 npm start
-\`\`\`
+```
 
 ---
-## 📸 API Uç Noktaları ve Görseller (API Endpoints & Visuals)
+
+## 🛠 Özellikler (Features)
+
+- **Mekan Yönetimi**: Mekan ekleme, düzenleme, görüntüleme ve silme.
+- **Lokasyon Servisleri**: Koordinatlara göre yakındaki mekanları listeleme.
+- **Yorum Sistemi**: Mekanlara yorum yapma, yorumları güncelleme ve silme.
+- **Yüksek Performans**: Vercel üzerinde hızlı ve güvenilir altyapı.
+
+---
+
+##  API Uç Noktaları ve Görseller (API Endpoints & Visuals)
 
 Aşağıda API'nin sunduğu temel fonksiyonların kullanım örnekleri ve ekran görüntüleri yer almaktadır.
 
@@ -85,6 +86,5 @@ Yapılan bir yorumu düzenler.
 Bir yorumu siler.
 ![Delete Comment](tests/deleteComment.bmp)
 
-
-
+---
 
